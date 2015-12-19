@@ -185,6 +185,13 @@ addKiller("YouTube", {
 
 "updateDecoder": function(videoID, data, callback) {
 	var _this = this;
+	
+	//for the time being just use the previous cipher / timestamp because it still works,
+	//for the latest base.js file the process below no longer works.
+	_this.decoder.timeStamp = 16777;
+	_this.decoder.key = [13,0,-3,2,0,-3,36];
+	return;
+	
 	var xhr = new XMLHttpRequest();
 	xhr.open("GET", "https://www.youtube.com/embed/" + videoID, true);
 	xhr.addEventListener("load", function() {
