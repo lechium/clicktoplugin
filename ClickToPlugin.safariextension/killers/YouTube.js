@@ -190,6 +190,7 @@ addKiller("YouTube", {
 	//for the latest base.js file the process below no longer works.
 	_this.decoder.timeStamp = 16777;
 	_this.decoder.key = [13,0,-3,2,0,-3,36];
+	_this.process(data, callback);
 	return;
 	
 	var xhr = new XMLHttpRequest();
